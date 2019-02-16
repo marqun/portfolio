@@ -1,43 +1,47 @@
+html {
+    height: 100%;
+  }
+
+
+
 body{
     background-color: rgb(0, 0, 0);
     color: rgb(224, 224, 224);
     font-size: 1rem;
     margin: auto;
     font-family: 'Montserrat', sans-serif;
+    min-height: 100%;
 }
 
 .content{
+   
+    height: 200vh;
+    min-height: 100%;
     display:grid;
-    grid-template-rows: 1fr 1fr;
-grid-template-areas: "la"
-                    "tc";
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-template-areas: 
+"logo logo logo logo"
+"about about about about"
+"techno techno techno techno"
+"contact contact contact contact"
+                    
 
 }
 
-.la{
-grid-area: la;
-/* display: grid; */
-/* grid-template-rows: 1fr 1fr; */
-
-
-}
-
-.tc{
-    /* display: grid;
-    grid-template-rows: 1fr 1fr; */
-grid-area: tc;
-}
 
 
 .logo{
+    grid-area: logo;
     background: url(images/logo.jpeg);
     background-size: cover;
     background-position: center;
-    min-height: 400px;
+    min-height: 100%;
+    min-width: 100%; 
     display: flex;
     /* flex-direction: row; */
-    align-items: center;
-    justify-content: center;
+     align-items: center;
+    justify-content: center; 
     color: rgb(255, 255, 255);
 }
 
@@ -52,6 +56,7 @@ grid-area: tc;
     }
 
 .about{
+    grid-area: about;
     padding:20px;
 }
 
@@ -79,6 +84,11 @@ text-align: center;
     text-align:center;
     }
 
+
+    .techno{
+        grid-area: techno;
+        min-width:100%;
+    }
    .techno ul{
         display: grid;
         grid-gap: 10px;
@@ -93,6 +103,10 @@ text-align: center;
         justify-content: center;
         }
 
+.contact{
+    grid-area: contact;
+    min-width: 100%;
+}        
 .contact li, .techno li{
    
     display: inline-flex;
@@ -116,7 +130,9 @@ font-size: 4.45rem;
 }
 
 
-
+.click{
+    color: red;
+}
 
 
 /* MOBILE FIRST */
@@ -139,10 +155,25 @@ h1{
 
 
   @media screen and (min-width: 1024px){
-      body{
-        max-width: 80%;
-      }
- 
+      
+.content{
+    width: 100vw;
+    height: 100vh;
+    grid-template-areas: 
+"logo logo techno techno"
+"logo logo techno techno"
+"about about contact contact"
+"about about contact contact";
+align-content: center;
+justify-content: center;
+justify-items: center;
+align-items: center;
 
+grid-gap: 10px;
+}
 
+.click{
+    color: white;
+    background-color: darkgrey;
+}
   }
