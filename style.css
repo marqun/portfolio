@@ -34,6 +34,7 @@ grid-template-areas:
 .logo{
     grid-area: logo;
     background: url(images/logo.jpeg);
+    border-radius: 5% 10%;
     background-size: cover;
     background-position: center;
     min-height: 100%;
@@ -151,6 +152,10 @@ font-size: 4.45rem;
 h1{
     font-size: 2rem;
 }
+.content{
+    width: 100vw;
+    height: 100vh;}
+
 
 }
 
