@@ -31,6 +31,7 @@ grid-template-areas:
 
 
 
+
 .logo{
     grid-area: logo;
     background: url(images/logo.jpeg);
@@ -111,12 +112,13 @@ text-align: center;
 .contact li, .techno li{
    
     display: inline-flex;
-justify-content: center;}
+justify-content: center;
+}
 
 
 .contact ul li a, .techno ul li a{
         text-decoration: none;
-        color: rgb(224, 224, 224);
+        color: rgba(224, 224, 224, 0.815);
         font-size: 4.4rem;
         font-weight: bold;
         text-decoration: none;
@@ -127,8 +129,13 @@ justify-content: center;}
 
 .contact ul li a:hover{
 color: white;
-font-size: 4.45rem;
+font-size: 4.41rem;
 }
+
+.techno ul li a:hover{
+    color: white;
+    font-size: 4.41rem;
+    }
 
 
 
@@ -176,10 +183,14 @@ h1{
     width: 100vw;
     height: 100vh;
     grid-template-areas: 
-"logo logo techno techno"
+/* "logo logo techno techno"
 "logo logo techno techno"
 "about about contact contact"
-"about about contact contact";
+"about about contact contact"; */
+"logo logo about about"
+"logo logo about about"
+"techno techno contact contact"
+"techno techno contact contact";
 align-content: center;
 justify-content: center;
 justify-items: center;
